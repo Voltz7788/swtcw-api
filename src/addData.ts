@@ -1,0 +1,208 @@
+import prisma from "./prismaGlobal";
+
+export async function addData() {
+  await prisma.clone.createMany({ data: legion_501st });
+  console.log("Data added!");
+}
+
+const legion_501st: Clone[] = [
+  {
+    id: 1,
+    jedi_general: "Anakin Skywalker",
+    name: "Rex",
+    role: "Captain",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "CT-7567",
+  },
+  {
+    id: 2,
+    jedi_general: "Anakin Skywalker",
+    name: "Appo",
+    role: "Sergeant",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "CC-1119",
+  },
+  {
+    id: 3,
+    jedi_general: "Anakin Skywalker",
+    name: "Vaughn",
+    role: "Captain",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "CT-0292",
+  },
+  {
+    id: 4,
+    jedi_general: "Anakin Skywalker",
+    name: "Jesse",
+    role: "Lieutenant",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "CT-5597",
+  },
+  {
+    id: 5,
+    jedi_general: "Anakin Skywalker",
+    name: "Hawk",
+    role: "Lieutenant",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "Unknown",
+  },
+  {
+    id: 6,
+    jedi_general: "Anakin Skywalker",
+    name: "Echo",
+    role: "Corporal",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "CT-1409",
+  },
+  {
+    id: 7,
+    jedi_general: "Anakin Skywalker",
+    name: "Denal",
+    role: "Trooper",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "Unknown",
+  },
+  {
+    id: 8,
+    jedi_general: "Anakin Skywalker",
+    name: "Dogma",
+    role: "Trooper",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "CT-6922",
+  },
+  {
+    id: 9,
+    jedi_general: "Anakin Skywalker",
+    name: "Fives",
+    role: "ARC-Trooper",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "CT-5555",
+  },
+  {
+    id: 10,
+    jedi_general: "Anakin Skywalker",
+    name: "Hardcase",
+    role: "Trooper",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "Unknown",
+  },
+  {
+    id: 11,
+    jedi_general: "Anakin Skywalker",
+    name: "Kix",
+    role: "Medic",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "Unknown",
+  },
+  {
+    id: 12,
+    jedi_general: "Anakin Skywalker",
+    name: "Mixer",
+    role: "Trooper",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "Unknown",
+  },
+  {
+    id: 13,
+    jedi_general: "Anakin Skywalker",
+    name: "Tup",
+    role: "Trooper",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "CT-5385",
+  },
+  {
+    id: 14,
+    jedi_general: "Anakin Skywalker",
+    name: "Tup",
+    role: "Trooper",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "CT-5385",
+  },
+  {
+    id: 15,
+    jedi_general: "Anakin Skywalker",
+    name: "Boomer",
+    role: "Sergeant",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "CS-2207",
+  },
+  {
+    id: 16,
+    jedi_general: "Anakin Skywalker",
+    name: "Redeye",
+    role: "Trooper",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "Unknown",
+  },
+  {
+    id: 17,
+    jedi_general: "Anakin Skywalker",
+    name: "Charger",
+    role: "Trooper",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "Unknown",
+  },
+  {
+    id: 18,
+    jedi_general: "Anakin Skywalker",
+    name: "Coric",
+    role: "Trooper",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "Unknown",
+  },
+  {
+    id: 19,
+    jedi_general: "Anakin Skywalker",
+    name: "Kano",
+    role: "Trooper",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "CS-1004",
+  },
+  {
+    id: 20,
+    jedi_general: "Anakin Skywalker",
+    name: "Oz",
+    role: "Trooper",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "Unknown",
+  },
+  {
+    id: 21,
+    jedi_general: "Anakin Skywalker",
+    name: "Ringo",
+    role: "Trooper",
+    unit: "501st",
+    unit_color: "Blue",
+    designation: "Unknown",
+  },
+];
+
+type Clone = {
+  id: number;
+  name: string;
+  designation: string;
+  role: string;
+  unit: string;
+  unit_color: string;
+  jedi_general: string;
+};

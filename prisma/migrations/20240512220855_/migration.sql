@@ -1,0 +1,15 @@
+-- CreateEnum
+CREATE TYPE "Rank" AS ENUM ('CADET', 'TROOPER', 'CORPORAL', 'SERGEANT', 'SERGEANT_MAJOR', 'SECOND_LIEUTENANT', 'LIEUTENANT', 'CAPTAIN', 'MAJOR', 'BATTALION_COMMANDER', 'REGIMENTAL_COMMANDER', 'SENIOR_COMMANDER', 'MARSHAL_COMMANDER');
+
+-- CreateTable
+CREATE TABLE "Clone" (
+    "id" SERIAL NOT NULL,
+    "name" TEXT NOT NULL,
+    "rank" "Rank" NOT NULL,
+    "unit" TEXT NOT NULL,
+    "unit_color" TEXT NOT NULL,
+    "jedi_general" TEXT NOT NULL
+);
+
+-- CreateIndex
+CREATE UNIQUE INDEX "Clone_id_key" ON "Clone"("id");
